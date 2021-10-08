@@ -4,8 +4,22 @@ import { Container } from './styles';
 import api from '../../services/api';
 import { useState } from 'react';
 
-const Food = ({ food, handleEditFood, handleDelete }) => {
-  const [isAvailable, setIsAvailable] = useState(food)
+type FoodProps = {
+  id: number;
+  image: string;
+  name: string;
+  description: string;
+  price: string;
+}
+
+interface FoodInterface {
+  food: FoodProps;
+  handleEditFood: (food: FoodProps) => void;
+  handleDelete: (id: number) => Promise<void>
+}
+
+const Food = ({ food, handleEditFood, handleDelete }: FoodInterface) => {
+  const [isAvailable, setIsAvailable] = useState(false)
 
   const toggleAvailable = async () => {
 

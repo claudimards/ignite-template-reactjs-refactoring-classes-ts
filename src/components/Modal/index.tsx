@@ -1,6 +1,13 @@
+import { ReactNode } from 'react';
 import ReactModal from 'react-modal';
 
-const Modal = ({isOpen, setIsOpen, children}) => {
+interface Modal {
+  isOpen: boolean;
+  setIsOpen: () => void;
+  children: ReactNode;
+}
+
+const Modal = ({isOpen, setIsOpen, children}: Modal) => {
 
     return (
       <ReactModal

@@ -10,7 +10,7 @@
       "isAvailable": false
     },
     {
-      "image": "teste",
+      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png",
       "name": "teste",
       "price": "2000",
       "description": "testasass",
